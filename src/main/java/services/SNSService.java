@@ -9,7 +9,7 @@ import software.amazon.awssdk.services.sns.model.PublishResponse;
 
 public class SNSService {
 
-    private static String topicArn = "";
+    private static String topicArn = "arn:aws:sns:us-east-2:163827816258:teste-sns";
 
     public static void sendMessage(String message) {
 
@@ -34,7 +34,7 @@ public class SNSService {
         };
 
         SnsClient snsClient = SnsClient.builder()
-                                       .region(Region.US_EAST_1)
+                                       .region(Region.US_EAST_2)
                                        .credentialsProvider(credentialsProvider)
                                        .build();
         

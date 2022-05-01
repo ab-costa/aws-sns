@@ -1,13 +1,16 @@
 package br.com.abcosta.aws.sns;
 
-import org.springframework.boot.SpringApplication;
+import java.time.LocalDate;
+
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import services.SNSService;
 
 @SpringBootApplication
 public class SnsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SnsApplication.class, args);
-	}
 
+		SNSService.sendMessage("MENSAGEM TESTE - " + LocalDate.now());
+	}
 }
